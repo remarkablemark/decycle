@@ -6,7 +6,7 @@
 [![build](https://github.com/remarkablemark/decycle/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/decycle/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/remarkablemark/decycle/graph/badge.svg?token=XCMG4hmYbs)](https://codecov.io/gh/remarkablemark/decycle)
 
-JSON decycle replaces circular references with `{"$ref": PATH}` (where PATH is the [JSONPath](https://wikipedia.org/wiki/JSONPath) of the first occurrence).
+JSON decycle replaces circular references with `{"$ref": PATH}`, where PATH is the [JSONPath](https://wikipedia.org/wiki/JSONPath) of the first occurrence.
 
 Inspired by [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js).
 
