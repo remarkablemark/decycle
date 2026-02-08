@@ -4,7 +4,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/decycle.svg)](https://www.npmjs.com/package/decycle)
 [![build](https://github.com/remarkablemark/decycle/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/decycle/actions/workflows/build.yml)
-[![codecov](https://codecov.io/gh/remarkablemark/decycle/graph/badge.svg?token=B0W2IQZ66A)](https://codecov.io/gh/remarkablemark/decycle)
+[![codecov](https://codecov.io/gh/remarkablemark/decycle/graph/badge.svg?token=XCMG4hmYbs)](https://codecov.io/gh/remarkablemark/decycle)
 
 decycle
 
