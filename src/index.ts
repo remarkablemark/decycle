@@ -1,1 +1,1 @@
-export const name = 'decycle';
+export { decycle } from './decycle';
