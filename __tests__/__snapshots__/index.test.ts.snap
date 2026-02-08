@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`index > matches snapshot for complex circular structure 1`] = `
+{
+  "children": [
+    [
+      {
+        "id": 1,
+      },
+      {
+        "id": 2,
+      },
+    ],
+    {
+      "$ref": "$["children"][0]",
+    },
+  ],
+  "name": "root",
+  "self": {
+    "$ref": "$",
+  },
+}
+`;
