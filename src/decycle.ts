@@ -26,14 +26,14 @@ interface DecycledObject {
  * the object or array. `[NUMBER]` or `[STRING]` indicates a child element or
  * property.
  *
- * @param object - The object or array to decycle.
+ * @param value - The object or array to decycle.
  * @param replacer - Optional replacer function called for each value.
- * @returns A deep copy of the object with circular references replaced by `$ref` objects.
+ * @returns - A deep copy of the object with circular references replaced by `$ref` objects.
  */
-export function decycle(object: unknown, replacer?: ReplacerFunction) {
-  const visitedObjects = new WeakMap<object, string>(); // object to path mappings
+export function decycle(value: unknown, replacer?: ReplacerFunction) {
+  const visitedObjects = new WeakMap<object, string>();
 
-  return deepCopy(object, '$', visitedObjects, replacer);
+  return deepCopy(value, '$', visitedObjects, replacer);
 }
 
 /**
@@ -44,7 +44,7 @@ export function decycle(object: unknown, replacer?: ReplacerFunction) {
  * @param path - The JSONPath to the current value.
  * @param visitedObjects - WeakMap tracking already-visited objects and their paths.
  * @param replacer - Optional replacer function called for each value.
- * @returns The deep-copied value.
+ * @returns - The deep-copied value.
  */
 function deepCopy(
   value: unknown,
@@ -95,7 +95,7 @@ function deepCopy(
  * built-in wrapper like `Boolean`, `Date`, `Number`, `RegExp`, or `String`).
  *
  * @param value - The value to check.
- * @returns `true` if the value is a plain object or array.
+ * @returns - `true` if the value is a plain object or array.
  */
 function isPlainObjectOrArray(value: unknown): value is object {
   return (
