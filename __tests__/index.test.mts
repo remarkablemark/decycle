@@ -1,7 +1,7 @@
-import { name } from '../dist/index.mjs';
+import { decycle } from '../dist/index.mjs';
 
 describe('index', () => {
-  it('exports name', () => {
-    assert.strictEqual(name, 'decycle');
+  it('exports decycle', () => {
+    assert.strictEqual(typeof decycle, 'function');
   });
 });

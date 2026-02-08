@@ -1,5 +1,7 @@
-import { name } from '../src/index';
+import { decycle } from '..';
 
-it('exports name', () => {
-  expect(name).toBe('decycle');
+describe('index', () => {
+  it('exports decycle', () => {
+    assert.strictEqual(typeof decycle, 'function');
+  });
 });
