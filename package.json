@@ -1,7 +1,7 @@
 {
   "name": "decycle",
   "version": "1.0.0-alpha",
-  "description": "decycle",
+  "description": "JSON decycle replaces circular references with JSON path references",
   "author": "Mark <mark@remarkablemark.org> (https://remarkablemark.org)",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -42,7 +42,10 @@
   },
   "keywords": [
     "JSON",
-    "decycle"
+    "decycle",
+    "circular",
+    "references",
+    "JSONPath"
   ],
   "devDependencies": {
     "@commitlint/cli": "20.4.1",
