@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(import.meta.dirname, 'src/index.ts'),
-      name: 'npm-package-typescript-template',
+      name: 'decycle',
       formats: ['cjs', 'es', 'umd'],
       fileName: (format) => {
         switch (format) {

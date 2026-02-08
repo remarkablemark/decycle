@@ -1,7 +1,7 @@
 {
-  "name": "npm-package-typescript-template",
+  "name": "decycle",
   "version": "1.0.0-alpha",
-  "description": "npm-package-typescript-template",
+  "description": "decycle",
   "author": "Mark <mark@remarkablemark.org> (https://remarkablemark.org)",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -35,13 +35,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/remarkablemark/npm-package-typescript-template.git"
+    "url": "git+https://github.com/remarkablemark/decycle.git"
   },
   "bugs": {
-    "url": "https://github.com/remarkablemark/npm-package-typescript-template/issues"
+    "url": "https://github.com/remarkablemark/decycle/issues"
   },
   "keywords": [
-    "npm-package-typescript-template"
+    "JSON",
+    "decycle"
   ],
   "devDependencies": {
     "@commitlint/cli": "20.4.1",
