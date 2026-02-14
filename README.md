@@ -1,6 +1,6 @@
 # decycle
 
-[![NPM](https://nodei.co/npm/decycle.svg)](https://nodei.co/npm/decycle/)
+[![NPM](https://nodei.co/npm/decycle.svg)](https://www.npmjs.com/package/decycle)
 
 [![NPM version](https://img.shields.io/npm/v/decycle.svg)](https://www.npmjs.com/package/decycle)
 [![build](https://github.com/remarkablemark/decycle/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/decycle/actions/workflows/build.yml)
