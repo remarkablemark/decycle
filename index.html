@@ -1,0 +1,104 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>decycle</title><meta name="description" content="Documentation for decycle"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css?cache=1788546314039"/><link rel="stylesheet" href="assets/highlight.css?cache=1788546314039"/><script defer src="assets/main.js?cache=1788546314039"></script><script async src="assets/icons.js?cache=1788546314039" id="tsd-icons-script"></script><script async src="assets/search.js?cache=1788546314039" id="tsd-search-script"></script><script async src="assets/navigation.js?cache=1788546314039" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container"><a href="index.html" class="title">decycle</a>
+<div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/>
+<ul role="listbox" id="tsd-search-results"></ul>
+<div id="tsd-search-status" aria-live="polite" aria-atomic="true">
+<div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header>
+<div class="container container-main">
+<div class="col-content">
+<div class="tsd-page-title">
+<h1>decycle</h1></div>
+<div class="tsd-panel tsd-typography"><h1 id="decycle" class="tsd-anchor-link">decycle<a href="#decycle" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<p><a href="https://www.npmjs.com/package/decycle"><img src="https://nodei.co/npm/decycle.svg" alt="NPM"></a></p>
+<p><a href="https://www.npmjs.com/package/decycle"><img src="https://img.shields.io/npm/v/decycle.svg" alt="NPM version"></a>
+<a href="https://github.com/remarkablemark/decycle/actions/workflows/build.yml"><img src="https://github.com/remarkablemark/decycle/actions/workflows/build.yml/badge.svg" alt="build"></a>
+<a href="https://codecov.io/gh/remarkablemark/decycle"><img src="https://codecov.io/gh/remarkablemark/decycle/graph/badge.svg?token=XCMG4hmYbs" alt="codecov"></a></p>
+<p>JSON decycle replaces circular references with <code>{&quot;$ref&quot;: PATH}</code>, where PATH is the <a href="https://wikipedia.org/wiki/JSONPath">JSONPath</a> of the first occurrence.</p>
+<p>Inspired by <a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a>.</p>
+<h2 id="quick-start" class="tsd-anchor-link">Quick Start<a href="#quick-start" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<pre><code class="ts"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">decycle</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;decycle&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">obj</span><span class="hl-1"> = { </span><span class="hl-2">a:</span><span class="hl-1"> </span><span class="hl-6">1</span><span class="hl-1"> };</span><br/><span class="hl-2">obj</span><span class="hl-1">.</span><span class="hl-2">self</span><span class="hl-1"> = </span><span class="hl-2">obj</span><span class="hl-1">;</span><br/><br/><span class="hl-5">JSON</span><span class="hl-1">.</span><span class="hl-7">stringify</span><span class="hl-1">(</span><span class="hl-7">decycle</span><span class="hl-1">(</span><span class="hl-2">obj</span><span class="hl-1">));</span><br/><span class="hl-8">// &#39;{&quot;a&quot;:1,&quot;self&quot;:{&quot;$ref&quot;:&quot;$&quot;}}&#39;</span>
+</code><button type="button">Copy</button></pre>
+
+<h2 id="install" class="tsd-anchor-link">Install<a href="#install" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><a href="https://www.npmjs.com/package/decycle">NPM</a>:</p>
+<pre><code class="sh"><span class="hl-7">npm</span><span class="hl-1"> </span><span class="hl-3">install</span><span class="hl-1"> </span><span class="hl-3">decycle</span>
+</code><button type="button">Copy</button></pre>
+
+<p><a href="https://yarnpkg.com/package/decycle">Yarn</a>:</p>
+<pre><code class="sh"><span class="hl-7">yarn</span><span class="hl-1"> </span><span class="hl-3">add</span><span class="hl-1"> </span><span class="hl-3">decycle</span>
+</code><button type="button">Copy</button></pre>
+
+<p><a href="https://unpkg.com/browse/decycle/">CDN</a>:</p>
+<pre><code class="html"><span class="hl-9">&lt;</span><span class="hl-10">script</span><span class="hl-11"> </span><span class="hl-12">src</span><span class="hl-11">=</span><span class="hl-13">&quot;https://unpkg.com/decycle@latest/dist/index.umd.js&quot;</span><span class="hl-9">&gt;&lt;/</span><span class="hl-10">script</span><span class="hl-9">&gt;</span>
+</code><button type="button">Copy</button></pre>
+
+<h2 id="usage" class="tsd-anchor-link">Usage<a href="#usage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>ES Modules:</p>
+<pre><code class="ts"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">decycle</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;decycle&#39;</span><span class="hl-1">;</span>
+</code><button type="button">Copy</button></pre>
+
+<p>CommonJS:</p>
+<pre><code class="ts"><span class="hl-4">const</span><span class="hl-1"> { </span><span class="hl-5">decycle</span><span class="hl-1"> } = </span><span class="hl-7">require</span><span class="hl-1">(</span><span class="hl-3">&#39;decycle&#39;</span><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
+<p>UMD:</p>
+<pre><code class="html"><span class="hl-9">&lt;</span><span class="hl-10">script</span><span class="hl-11"> </span><span class="hl-12">src</span><span class="hl-11">=</span><span class="hl-13">&quot;https://unpkg.com/decycle@latest/dist/index.umd.js&quot;</span><span class="hl-9">&gt;&lt;/</span><span class="hl-10">script</span><span class="hl-9">&gt;</span><br/><span class="hl-9">&lt;</span><span class="hl-10">script</span><span class="hl-9">&gt;</span><br/><span class="hl-11">  </span><span class="hl-4">const</span><span class="hl-11"> { </span><span class="hl-5">decycle</span><span class="hl-11"> } </span><span class="hl-1">=</span><span class="hl-11"> </span><span class="hl-2">window</span><span class="hl-11">.</span><span class="hl-2">decycle</span><span class="hl-11">;</span><br/><span class="hl-9">&lt;/</span><span class="hl-10">script</span><span class="hl-9">&gt;</span>
+</code><button type="button">Copy</button></pre>
+
+<h3 id="decyclevalue-replacer" class="tsd-anchor-link">decycle(value, replacer?)<a href="#decyclevalue-replacer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p>Returns a deep copy of <code>object</code> or <code>array</code> with circular references replaced by <code>{&quot;$ref&quot;: PATH}</code>.</p>
+<h4 id="value" class="tsd-anchor-link">value<a href="#value" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p>Type: <code>unknown</code></p>
+<p>The object or array to decycle.</p>
+<h4 id="replacer" class="tsd-anchor-link">replacer<a href="#replacer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4>
+<p>Type: <code>(value: unknown) =&gt; unknown</code></p>
+<p>Optional replacer function called for each value. It receives a value and returns a replacement value.</p>
+<h3 id="examples" class="tsd-anchor-link">Examples<a href="#examples" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p>Circular array:</p>
+<pre><code class="ts"><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">array</span><span class="hl-1"> = [];</span><br/><span class="hl-2">array</span><span class="hl-1">[</span><span class="hl-6">0</span><span class="hl-1">] = </span><span class="hl-2">array</span><span class="hl-1">;</span><br/><span class="hl-5">JSON</span><span class="hl-1">.</span><span class="hl-7">stringify</span><span class="hl-1">(</span><span class="hl-7">decycle</span><span class="hl-1">(</span><span class="hl-2">array</span><span class="hl-1">)); </span><span class="hl-8">// &#39;[{&quot;$ref&quot;:&quot;$&quot;}]&#39;</span>
+</code><button type="button">Copy</button></pre>
+
+<p>With replacer:</p>
+<pre><code class="ts"><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">obj</span><span class="hl-1"> = { </span><span class="hl-2">date:</span><span class="hl-1"> </span><span class="hl-4">new</span><span class="hl-1"> </span><span class="hl-7">Date</span><span class="hl-1">(</span><span class="hl-3">&#39;2026-02-07&#39;</span><span class="hl-1">) };</span><br/><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">result</span><span class="hl-1"> = </span><span class="hl-7">decycle</span><span class="hl-1">(</span><span class="hl-2">obj</span><span class="hl-1">, (</span><span class="hl-2">value</span><span class="hl-1">) </span><span class="hl-4">=&gt;</span><br/><span class="hl-1">  </span><span class="hl-2">value</span><span class="hl-1"> </span><span class="hl-4">instanceof</span><span class="hl-1"> </span><span class="hl-14">Date</span><span class="hl-1"> ? </span><span class="hl-2">value</span><span class="hl-1">.</span><span class="hl-7">toISOString</span><span class="hl-1">() : </span><span class="hl-2">value</span><span class="hl-1">,</span><br/><span class="hl-1">);</span><br/><span class="hl-8">// { date: &#39;2026-02-07T00:00:00.000Z&#39; }</span>
+</code><button type="button">Copy</button></pre>
+
+<h2 id="release" class="tsd-anchor-link">Release<a href="#release" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>Release is automated with <a href="https://github.com/googleapis/release-please">Release Please</a>.</p>
+<h2 id="license" class="tsd-anchor-link">License<a href="#license" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><a href="https://github.com/remarkablemark/decycle/blob/master/LICENSE">MIT</a></p>
+</div></div>
+<div class="col-sidebar">
+<div class="page-menu">
+<div class="tsd-navigation settings">
+<details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div>
+<div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>On This Page</h3></summary>
+<div class="tsd-accordion-details"><a href="#decycle"><span>decycle</span></a>
+<ul>
+<li><a href="#quick-start"><span>Quick <wbr/>Start</span></a></li>
+<li><a href="#install"><span>Install</span></a></li>
+<li><a href="#usage"><span>Usage</span></a></li>
+<li>
+<ul>
+<li><a href="#decyclevalue-replacer"><span>decycle(value, replacer?)</span></a></li>
+<li>
+<ul>
+<li><a href="#value"><span>value</span></a></li>
+<li><a href="#replacer"><span>replacer</span></a></li></ul></li>
+<li><a href="#examples"><span>Examples</span></a></li></ul></li>
+<li><a href="#release"><span>Release</span></a></li>
+<li><a href="#license"><span>License</span></a></li></ul></div></details></div>
+<div class="site-menu">
+<nav class="tsd-navigation"><a href="modules.html">decycle</a>
+<ul class="tsd-small-nested-navigation" id="tsd-nav-container">
+<li>Loading...</li></ul></nav></div></div></div><footer>
+<p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer>
+<div class="overlay"></div></body></html>
